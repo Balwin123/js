@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: hidden;
+    height: 100%;
+    background: url(../assets/professional-voicemail-greetings.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header{
+    background: #ED4C67;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+}
+#sideMenu{
+    background: #0652DD;
+    height: 100%;
+    width: 250px;
+    margin-top: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-250px);
+    transition: transform 250ms ease-in-out; 
+
+}
+#openSidebarMenu:checked ~ #sideMenu{
+    transform: translateX(0);
+} 
+.menu{
+    list-style: none;
+}
+.menu li{
+    border-bottom: 2px solid #000;
+}
+.menu li a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.menu li a:hover{
+    background: #000;
+}
+.sidebarToggle-icon{
+    /* background: #fff;  */
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    z-index: 20;
+    top: 22px;
+    left: 15px;
+    cursor: pointer;
+
+}
+.spinner{
+    height: 3px;
+    background: #fff;
+    transition: all 0.3px;
+}
+.spinner.middle,
+.spinner.bottom{
+    margin-top: 3px;
+}
+#openSidebarMenu:checked ~ .sidebarToggle-icon >.spinner.middle{
+    opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarToggle-icon > .spinner.top{
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#openSidebarMenu:checked ~ .sidebarToggle-icon > .spinner.bottom{
+    transform: rotate(-135deg);
+    margin-top: -9px;
+} 
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+input[type="checkbox"]{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: gray;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+input:checked[type="checkbox"]{
+    background: #e84118;
+}
+input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+input:checked[type="checkbox"]:before{
+    left: 40px;
+}

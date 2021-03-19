@@ -21,24 +21,45 @@
 // alert("My name is " + x.name + ", I am " + x.age + ", I am a " + x.profession + ",and I make " + x.salary);
 
 
-class Person{
-    constructor(firstName, lastName, age){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+// class Person{
+//     constructor(firstName, lastName, age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
 
-    }
-    greet(){
-        return 'Hello ${this.firstName} ${this.lastName}, How are you doing?'
-    }
-}//inheritance
-class customer extends Person{
-    constructor(firstName,lastName,age, phone,membership){
-        super(firstName,lastName, age);
+//     }
+//     greet(){
+//         return 'Hello ${this.firstName} ${this.lastName}, How are you doing?'
+//     }
+// }//inheritance
+// class customer extends Person{
+//     constructor(firstName,lastName,age, phone,membership){
+//         super(firstName,lastName, age);
 
-        this.phone = phone;
-        this.membership = membership;
-    }
+//         this.phone = phone;
+//         this.membership = membership;
+//     }
+// }
+// const phil = new Person('Philip','mree');
+// console.log(phil.greet());
+
+
+function Person(name,age,profession,email,salary){
+    this.name = name;
+    this.age = age;
+    this.profession = profession;
+    this.email = email;
+    this.salary = salary;
+
+ 
+   
 }
-const phil = new Person('Philip','mree');
-console.log(phil.greet());
+
+
+var b = new Person("Balwin Mankhin",30,"Web-Developer","balwinmk@gmail.com",3000);
+
+console.log(b.name +".");
+console.log(b.age +".");
+console.log(b.profession +".");
+console.log(b.email +".");
+console.log(b.salary +".");
